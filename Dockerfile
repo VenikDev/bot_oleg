@@ -1,5 +1,5 @@
 # Base image
-FROM python:3.11-alpine
+FROM python:3.9-slim-buster
 
 # Set working directory
 WORKDIR /app
@@ -7,11 +7,11 @@ WORKDIR /app
 # Copy source code to image
 COPY . .
 
+# Install core dependencies.
+RUN apt-get update && apt-get install -y libpq-dev build-essential
+
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Expose application port
-EXPOSE 5000
 
 # Start the application
 CMD [ "python", "bot.py" ]
