@@ -13,7 +13,7 @@ driver= '{SQL Server Native Client 11.0}'
 
 cnxn = pyodbc.connect("Driver={SQL Server Native Client 11.0};Server=10.100.0.160;UID=Femi;PWD=Start!;DB=MVVMLoginDb;")
 config = {
-    'token': 'ODMxMjAwMTM2ODk2OTcwODMz.GnX2ay.EE5IMIZnTxk1sFU5fHiTAA1Twm301JCkyPbudY',
+    'token': '',
     'prefix': '!',
 }
 intents = discord.Intents.default()
